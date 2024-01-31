@@ -52,7 +52,10 @@ export class ajedrezService {
     var xReemplazar: any = Number(idAreemplazar.substring(0,1))
     var yReemplazar: any = Number(idAreemplazar.substring(2,3))
     var piezaAmover: Pieza = this.tablero[xAmover][yAmover]
-    this.tablero[xReemplazar][yReemplazar] = piezaAmover
-    this.tablero[xAmover][yAmover] = null
+    var piezaAreemplazar: Pieza = this.tablero[xReemplazar][yReemplazar] 
+    if(JSON.stringify(piezaAmover) != JSON.stringify(piezaAreemplazar)){
+      this.tablero[xReemplazar][yReemplazar] = piezaAmover
+      this.tablero[xAmover][yAmover] = null
+    }
   }
 }
