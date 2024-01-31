@@ -1,0 +1,23 @@
+#tablero div:nth-child(1) div:nth-child(odd),
+#tablero div:nth-child(3) div:nth-child(odd),
+#tablero div:nth-child(5) div:nth-child(odd),
+#tablero div:nth-child(7) div:nth-child(odd),
+#tablero div:nth-child(even) div:nth-child(even)
+{
+    background-color:rgb(230, 230, 200);
+}
+
+#tablero div:nth-child(1) div:nth-child(even),
+#tablero div:nth-child(5) div:nth-child(even),
+#tablero div:nth-child(7) div:nth-child(even),
+#tablero div:nth-child(3) div:nth-child(even),
+#tablero div:nth-child(even) div:nth-child(odd)
+{
+    background-color: rgb(169, 131, 7);
+}
+
+.tanioCeldas{
+    background: black;
+    color: #fff;
+    height: 90px;
+}

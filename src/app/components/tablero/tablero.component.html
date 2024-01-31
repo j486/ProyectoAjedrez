@@ -1,0 +1,23 @@
+<!--<h1>El texto es: {{texto}}</h1>
+<div>
+    <input [(ngModel)]="message" placeholder="Escribe un mensaje">
+    <button (click)="sendMessage()">Enviar</button>
+</div>-->
+<script>
+    var prueba = 0
+  </script>
+
+<div class="container mt-5" id="tablero">
+
+    <div *ngFor="let index of getDescendingIndices(8); let x = index" class="row">
+        <div *ngFor="let index of getAscendingIndices(8); let y = index" [id]="x + '_' + y" 
+        class = "tanioCeldas col"
+        cdkDropList (cdkDropListDropped)="drop($event)">
+            <ng-container *ngIf="tablero[x][y] != null">
+                <img  [src]="'./assets/' + tablero[x][y].figura + ' ' + tablero[x][y].color + '.png'"
+                 style="height: 75px; width: 70px;" 
+                 cdkDrag (cdkDragStarted)="dragStarted($event)" [id]="'img_' + x + '_' + y">
+            </ng-container>
+        </div>
+    </div>
+</div>
